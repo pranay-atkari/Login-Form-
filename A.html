@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="B.css">
+</head>
+<body>
+    <div class="container">
+
+        <form id="form1">
+              <h2>Create Account</h2>
+               <input type="text" placeholder="Email" required>
+               <input type="pass" placeholder="Password" required>
+               <input type="pass" placeholder="Confirm Password" required>
+
+               <div class="head">
+                <button type="button" id="Next1">Next</button>
+            </div>
+        </form>
+        
+        <form id="form2">
+            <h2>Social Link</h2>
+             <input type="text" placeholder="Media" required>
+             <input type="pass" placeholder="Linkedin" required>
+             <input type="pass" placeholder="Git-Hub" required>
+
+             <div class="head">
+              <button type="button" id="Back1">Back</button>
+              <button type="button" id="Next2">Next</button>
+          </div>
+      </form>        
+
+      <form id="form3">
+        <h2>Personal Information</h2>
+         <input type="text" placeholder="First Name" required>
+         <input type="pass" placeholder="Last Name" required>
+         <input type="pass" placeholder="Mob No" required>
+
+         <div class="head">
+          <button type="button" id="Back2">Back</button>
+          <div>
+          <button type="submit" onclick="openraj()">Sumbit</button>
+            <div class="raj" id="raj">
+                <h2>Thank You !</h2>
+            </div>
+        </div>
+      </div>
+
+      <script>
+        let raj = document.getElementById("raj");
+          
+         function openraj(){
+            raj.classList.add("open-raj");
+         }
+      </script>
+  </form>        
+
+          <div class="call">
+            
+            <div id="progress"></div>
+
+            <div class="p"><small>Step 1</small></div>
+            <div class="p"><small>Step 2</small></div>
+            <div class="p"><small>Step 3</small></div>
+          </div>
+    </div>
+
+        <script>
+            var form1 = document.getElementById("form1");
+            var form2 = document.getElementById("form2");
+            var form3 = document.getElementById("form3");
+
+            var Next1 = document.getElementById("Next1");
+            var Next2 = document.getElementById("Next2");
+            var Back1 = document.getElementById("Back1");
+            var Back2 = document.getElementById("Back2"); 
+
+            var progress = document.getElementById("progress");
+
+            Next1.onclick = function(){
+                form1.style.left="-450px";
+                 form2.style.left="40px";
+                 progress.style.width= "240px";
+            }
+
+            Back1.onclick = function(){
+                form1.style.left="40px";
+                 form2.style.left="450px";
+                 progress.style.width= "240px";
+            }
+              
+            Next2.onclick = function(){
+                form2.style.left="-450px";
+                 form3.style.left="40px";
+                 progress.style.width= "240px";
+            } 
+
+            Back2.onclick = function(){
+                form2.style.left="40px";
+                 form3.style.left="450px";
+                 progress.style.width= "240px";
+            }
+              
+        </script>
+
+</body>
+</html>
